@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "algo-pratice"
+version = "0.1.0"
+description = ""
+authors = ["Khang.PT (ktuanPT373), TuanCR <tuancr.pt@gmail.com>"]
+readme = "README.md"
+packages = [{include = "algo_pratice"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+toolz = "^0.12.1"
+returns = "^0.22.0"
+lambdas = "^0.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/mypy.toml"

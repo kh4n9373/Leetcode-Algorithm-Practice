@@ -1,0 +1,3 @@
+["setup.cfg".mypy]
+strict = true
+warn_unreachable = true
