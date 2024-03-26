@@ -10,6 +10,11 @@ poetry shell
 
 Python - 3.10
 
+# Test
+```
+make test
+```
+
 # Refs
 
 https://leetcode.com/phmtrntuankhang/

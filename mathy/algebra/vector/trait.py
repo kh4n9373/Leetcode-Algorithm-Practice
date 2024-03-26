@@ -1,5 +1,5 @@
 from typing import final
-from math.algebra.vector.type import IVecTrait, Vec
+from mathy.algebra.vector.type import IVecTrait, Vec
 from toolz.dicttoolz import valmap
 from returns.result import Result
 from returns.pointfree import cond
