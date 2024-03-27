@@ -1,10 +1,10 @@
-from abc import ABC, abstractmethod
 import json
+from abc import ABC, abstractmethod
 from typing import Dict
-from returns.pointfree import bind, cond
 
-from returns.result import Result, ResultE
 from returns.pipeline import flow
+from returns.pointfree import bind, cond
+from returns.result import Result, ResultE
 
 
 class Vec:
@@ -15,12 +15,15 @@ class Vec:
     def __repr__(self):
         return json.dumps({"domain": list(self.D), "function": self.f})
 
+    def __eq__(self, other):
+        return self.D == other.D and self.f == other.f
+
 
 class IVecTrait(ABC):
 
     # smart parser (smart constructor)
     @staticmethod
-    def parse(labels: set[str], function: Dict[str, float]):
+    def parse(labels: set[str], function: Dict[str, float]) -> ResultE[Vec]:
         def is_same_dimension():
             return len(labels) == len(function)
 
